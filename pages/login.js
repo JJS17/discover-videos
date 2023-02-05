@@ -19,12 +19,12 @@ const Login = () => {
   const handleLoginWithEmail = async (e) => {
     e.preventDefault();
     if (email) {
-      if (email === `jjsemaan217@gmail.com`) {
+      if (email) {
         try {
           const didToken = await magic.auth.loginWithMagicLink({
             email,
           });
-          console.log(didToken);
+          // console.log(didToken);
         } catch (err) {
           console.error(err);
         }

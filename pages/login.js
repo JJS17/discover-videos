@@ -10,6 +10,7 @@ const Login = () => {
   const router = useRouter();
   const [email, setEmail] = useState(``);
   const [userMsg, setUserMsg] = useState(``);
+  console.log(magic);
 
   const handleOnChangeEmail = (e) => {
     e.preventDefault();
@@ -24,7 +25,7 @@ const Login = () => {
           const didToken = await magic.auth.loginWithMagicLink({
             email,
           });
-          // console.log(didToken);
+          console.log(didToken);
         } catch (err) {
           console.error(err);
         }
